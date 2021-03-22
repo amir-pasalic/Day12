@@ -1,5 +1,5 @@
 var collection = {
-  2548: {
+  2458: {
     album: "Slippery When Wet",
     artist: "Bon Jovi",
     tracks: ["Let It Rock", "You Give Love a Bad Name"],
@@ -17,9 +17,7 @@ var collection = {
     album: "ABBA Gold",
   },
 };
-
 var oldCollection = JSON.parse(JSON.stringify(collection));
-
 function updateRecords(object, id, prop, value) {
   if (prop !== "tracks" && value !== "") {
     object[id][prop] = value;
@@ -35,10 +33,8 @@ function updateRecords(object, id, prop, value) {
   }
   return object;
 }
-
 console.log(updateRecords(collection, 5439, "artist", "ABBA"));
 console.log(updateRecords(collection, 5439, "tracks", "Take a Chance on Me"));
-console.log(updateRecords(collection, 2548, "artist", ""));
+console.log(updateRecords(collection, 2458, "artist", ""));
 console.log(updateRecords(collection, 1245, "tracks", "Addicted to Love"));
-
-module.exsports = updateRecords;
+module.exports = updateRecords;
